@@ -1,0 +1,44 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module elixir.serving</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong><a href="elixir.html"><font color="#ffffff">elixir</font></a>.serving</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="https://github.com/HinaseDev/elixir/blob/main/elixir/serving.py">https://github.com/HinaseDev/elixir/blob/main/elixir/serving.py</a></font></td></tr></table>
+    <p></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#eeaa77">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Functions</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#eeaa77"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt><a name="-check_app"><strong>check_app</strong></a>(app)</dt><dd><tt>Called&nbsp;by&nbsp;<a href="#-make_server">make_server</a>()&nbsp;to&nbsp;assert&nbsp;that&nbsp;the&nbsp;WSGI&nbsp;App&nbsp;is&nbsp;capable&nbsp;of&nbsp;working<br>
+with&nbsp;WSGI&nbsp;Environments.<br>
+&nbsp;<br>
+&gt;&gt;&gt;&nbsp;from&nbsp;my_server&nbsp;import&nbsp;app<br>
+&gt;&gt;&gt;&nbsp;<a href="#-check_app">check_app</a>(app)<br>
+True<br>
+&gt;&gt;&gt;&nbsp;<a href="#-check_app">check_app</a>("This&nbsp;wont&nbsp;work")<br>
+False<br>
+&nbsp;<br>
+Essentially,&nbsp;this&nbsp;function&nbsp;creates&nbsp;a&nbsp;sample&nbsp;WSGI&nbsp;Environment&nbsp;and&nbsp;passes&nbsp;it&nbsp;to&nbsp;the&nbsp;app</tt></dd></dl>
+ <dl><dt><a name="-fake_start_response"><strong>fake_start_response</strong></a>(s, h)</dt></dl>
+ <dl><dt><a name="-make_empty_environment"><strong>make_empty_environment</strong></a>()</dt></dl>
+ <dl><dt><a name="-make_server"><strong>make_server</strong></a>(host: str, port: int, app: Any, skip_test=True)</dt></dl>
+ <dl><dt><a name="-run_server"><strong>run_server</strong></a>(app, host='localhost', port=1234)</dt></dl>
+</td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#55aa55">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Data</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#55aa55"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><strong>Any</strong> = typing.Any<br>
+<strong>ByteString</strong> = typing.ByteString<br>
+<strong>List</strong> = typing.List</td></tr></table>
+</body></html>

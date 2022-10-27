@@ -1,0 +1,98 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module elixir.application</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong><a href="elixir.html"><font color="#ffffff">elixir</font></a>.application</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="https://github.com/HinaseDev/elixir/blob/main/elixir/application.py">https://github.com/HinaseDev/elixir/blob/main/elixir/application.py</a></font></td></tr></table>
+    <p><tt>Minimalist&nbsp;<a href="#WSGI">WSGI</a>-App&nbsp;Server</tt></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ee77aa">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Classes</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl>
+<dt><font face="helvetica, arial"><a href="builtins.html#object">builtins.object</a>
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="elixir.application.html#WSGI">WSGI</a>
+</font></dt></dl>
+</dd>
+</dl>
+ <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="WSGI">class <strong>WSGI</strong></a>(<a href="builtins.html#object">builtins.object</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt><a href="#WSGI">WSGI</a>(handler)&nbsp;-&amp;gt;&nbsp;None<br>
+&nbsp;<br>
+Most&nbsp;basic&nbsp;Handler&nbsp;for&nbsp;<a href="#WSGI">WSGI</a>&nbsp;Servers.<br>
+&nbsp;<br>
+Sample&nbsp;Usage:<br>
+&nbsp;<br>
+```py<br>
+from&nbsp;elixir.application&nbsp;import&nbsp;<a href="#WSGI">WSGI</a>,&nbsp;wrap_response<br>
+from&nbsp;elixir.serving&nbsp;import&nbsp;run_server<br>
+&nbsp;<br>
+def&nbsp;recv(request,&nbsp;response):<br>
+&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;<a href="#-wrap_response">wrap_response</a>("Hello&nbsp;World",&nbsp;response)<br>
+&nbsp;<br>
+run_server(<a href="#WSGI">WSGI</a>(recv))<br>
+```<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="WSGI-__call__"><strong>__call__</strong></a>(self, environ, start_response, *args: Any, **kwds: Any) -&gt; Any</dt><dd><tt>Call&nbsp;self&nbsp;as&nbsp;a&nbsp;function.</tt></dd></dl>
+
+<dl><dt><a name="WSGI-__init__"><strong>__init__</strong></a>(self, handler) -&gt; None</dt><dd><tt>The&nbsp;__init__&nbsp;function&nbsp;is&nbsp;called&nbsp;when&nbsp;the&nbsp;class&nbsp;is&nbsp;instantiated.&nbsp;<br>
+It&nbsp;can&nbsp;take&nbsp;arguments&nbsp;that&nbsp;become&nbsp;bound&nbsp;to&nbsp;the&nbsp;names&nbsp;in&nbsp;the&nbsp;function&nbsp;definition,&nbsp;<br>
+and&nbsp;must&nbsp;return&nbsp;an&nbsp;<a href="builtins.html#object">object</a>&nbsp;of&nbsp;type&nbsp;'self'.&nbsp;This&nbsp;<a href="builtins.html#object">object</a>&nbsp;will&nbsp;be&nbsp;bound&nbsp;to&nbsp;the&nbsp;name&nbsp;self&nbsp;in&nbsp;all&nbsp;subsequent&nbsp;calls&nbsp;to&nbsp;this&nbsp;instance.<br>
+&nbsp;<br>
+:param&nbsp;self:&nbsp;Refer&nbsp;to&nbsp;the&nbsp;instance&nbsp;of&nbsp;the&nbsp;class<br>
+:param&nbsp;handler:&nbsp;Pass&nbsp;the&nbsp;request&nbsp;and&nbsp;response&nbsp;objects&nbsp;to&nbsp;the&nbsp;__call__&nbsp;method<br>
+:return:&nbsp;None</tt></dd></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#eeaa77">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Functions</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#eeaa77"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt><a name="-wrap_response"><strong>wrap_response</strong></a>(text, start_response, *, headers: elixir.middleware.Headers = &lt;elixir.middleware.Headers object at 0x7fa49f1b6c20&gt;, status_code='200 Ok', mimetype='text/html')</dt><dd><tt>The&nbsp;wrap_response&nbsp;function&nbsp;takes&nbsp;a&nbsp;string&nbsp;and&nbsp;returns&nbsp;an&nbsp;iterable&nbsp;that&nbsp;can&nbsp;be&nbsp;passed&nbsp;to&nbsp;the&nbsp;<a href="#WSGI">WSGI</a>&nbsp;server.<br>
+The&nbsp;function&nbsp;also&nbsp;accepts&nbsp;keyword&nbsp;arguments,&nbsp;which&nbsp;are&nbsp;used&nbsp;to&nbsp;set&nbsp;up&nbsp;the&nbsp;response&nbsp;headers.<br>
+&nbsp;<br>
+&nbsp;<br>
+:param&nbsp;text:&nbsp;Pass&nbsp;the&nbsp;body&nbsp;of&nbsp;the&nbsp;response<br>
+:param&nbsp;start_response:&nbsp;Set&nbsp;the&nbsp;status&nbsp;code&nbsp;and&nbsp;headers&nbsp;for&nbsp;the&nbsp;response<br>
+:param&nbsp;*:&nbsp;Pass&nbsp;a&nbsp;variable&nbsp;number&nbsp;of&nbsp;arguments&nbsp;to&nbsp;a&nbsp;function<br>
+:param&nbsp;headers:Headers=InitialHeaders:&nbsp;Set&nbsp;the&nbsp;default&nbsp;headers&nbsp;for&nbsp;all&nbsp;responses<br>
+:param&nbsp;status_code=&amp;quot;200Ok&amp;quot;:&nbsp;Specify&nbsp;the&nbsp;status&nbsp;code&nbsp;of&nbsp;the&nbsp;response<br>
+:param&nbsp;mimetype=&amp;quot;text/html&amp;quot;:&nbsp;Specify&nbsp;the&nbsp;type&nbsp;of&nbsp;content&nbsp;that&nbsp;is&nbsp;being&nbsp;returned<br>
+:return:&nbsp;The&nbsp;response&nbsp;text,&nbsp;the&nbsp;status&nbsp;code&nbsp;and&nbsp;the&nbsp;headers</tt></dd></dl>
+</td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#55aa55">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Data</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#55aa55"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><strong>Any</strong> = typing.Any<br>
+<strong>InitialHeaders</strong> = &lt;elixir.middleware.Headers object&gt;<br>
+<strong>Union</strong> = typing.Union</td></tr></table>
+</body></html>

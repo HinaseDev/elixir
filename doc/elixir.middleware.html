@@ -1,0 +1,214 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module elixir.middleware</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong><a href="elixir.html"><font color="#ffffff">elixir</font></a>.middleware</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="https://github.com/HinaseDev/elixir/blob/main/elixir/middleware.py">https://github.com/HinaseDev/elixir/blob/main/elixir/middleware.py</a></font></td></tr></table>
+    <p></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ee77aa">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Classes</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl>
+<dt><font face="helvetica, arial"><a href="builtins.html#dict">builtins.dict</a>(<a href="builtins.html#object">builtins.object</a>)
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="elixir.middleware.html#ImmutableDict">ImmutableDict</a>
+</font></dt></dl>
+</dd>
+<dt><font face="helvetica, arial"><a href="builtins.html#object">builtins.object</a>
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="elixir.middleware.html#HeaderSet">HeaderSet</a>
+</font></dt><dt><font face="helvetica, arial"><a href="elixir.middleware.html#Headers">Headers</a>
+</font></dt></dl>
+</dd>
+</dl>
+ <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="HeaderSet">class <strong>HeaderSet</strong></a>(<a href="builtins.html#object">builtins.object</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt><a href="#HeaderSet">HeaderSet</a>(*items)&nbsp;-&amp;gt;&nbsp;None<br>
+&nbsp;<br>
+<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="HeaderSet-__delitem__"><strong>__delitem__</strong></a> = <a href="#HeaderSet-_immutable">_immutable</a>(self, *args, **kws)</dt></dl>
+
+<dl><dt><a name="HeaderSet-__init__"><strong>__init__</strong></a>(self, *items) -&gt; None</dt><dd><tt>Initialize&nbsp;self.&nbsp;&nbsp;See&nbsp;help(type(self))&nbsp;for&nbsp;accurate&nbsp;signature.</tt></dd></dl>
+
+<dl><dt><a name="HeaderSet-__setitem__"><strong>__setitem__</strong></a> = <a href="#HeaderSet-_immutable">_immutable</a>(self, *args, **kws)</dt></dl>
+
+<dl><dt><a name="HeaderSet-clear"><strong>clear</strong></a> = <a href="#HeaderSet-_immutable">_immutable</a>(self, *args, **kws)</dt></dl>
+
+<dl><dt><a name="HeaderSet-pop"><strong>pop</strong></a> = <a href="#HeaderSet-_immutable">_immutable</a>(self, *args, **kws)</dt></dl>
+
+<dl><dt><a name="HeaderSet-popitem"><strong>popitem</strong></a> = <a href="#HeaderSet-_immutable">_immutable</a>(self, *args, **kws)</dt></dl>
+
+<dl><dt><a name="HeaderSet-setdefault"><strong>setdefault</strong></a> = <a href="#HeaderSet-_immutable">_immutable</a>(self, *args, **kws)</dt></dl>
+
+<dl><dt><a name="HeaderSet-update"><strong>update</strong></a> = <a href="#HeaderSet-_immutable">_immutable</a>(self, *args, **kws)</dt></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="Headers">class <strong>Headers</strong></a>(<a href="builtins.html#object">builtins.object</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt><a href="#Headers">Headers</a>(initial_headers:&nbsp;Union[<a href="builtins.html#dict">dict</a>,&nbsp;List[Iterable]])&nbsp;-&amp;gt;&nbsp;None<br>
+&nbsp;<br>
+<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="Headers-__getitem__"><strong>__getitem__</strong></a>(self, key)</dt></dl>
+
+<dl><dt><a name="Headers-__init__"><strong>__init__</strong></a>(self, initial_headers: Union[dict, List[Iterable]]) -&gt; None</dt><dd><tt>Initialize&nbsp;self.&nbsp;&nbsp;See&nbsp;help(type(self))&nbsp;for&nbsp;accurate&nbsp;signature.</tt></dd></dl>
+
+<dl><dt><a name="Headers-__setitem__"><strong>__setitem__</strong></a>(self, key, val)</dt></dl>
+
+<dl><dt><a name="Headers-add"><strong>add</strong></a>(self, key, val)</dt></dl>
+
+<dl><dt><a name="Headers-extend"><strong>extend</strong></a>(self, headers: Union[ForwardRef('Headers'), dict, Iterable[Iterable]])</dt></dl>
+
+<dl><dt><a name="Headers-get"><strong>get</strong></a>(self, key, default=None)</dt></dl>
+
+<hr>
+Readonly properties defined here:<br>
+<dl><dt><strong>as_wsgi</strong></dt>
+</dl>
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="ImmutableDict">class <strong>ImmutableDict</strong></a>(<a href="builtins.html#dict">builtins.dict</a>)</font></td></tr>
+    
+<tr><td bgcolor="#ffc8d8"><tt>&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="elixir.middleware.html#ImmutableDict">ImmutableDict</a></dd>
+<dd><a href="builtins.html#dict">builtins.dict</a></dd>
+<dd><a href="builtins.html#object">builtins.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="ImmutableDict-__delitem__"><strong>__delitem__</strong></a> = <a href="#ImmutableDict-_immutable">_immutable</a>(self, *args, **kws)</dt></dl>
+
+<dl><dt><a name="ImmutableDict-__hash__"><strong>__hash__</strong></a>(self)</dt><dd><tt>Return&nbsp;hash(self).</tt></dd></dl>
+
+<dl><dt><a name="ImmutableDict-__setitem__"><strong>__setitem__</strong></a> = <a href="#ImmutableDict-_immutable">_immutable</a>(self, *args, **kws)</dt></dl>
+
+<dl><dt><a name="ImmutableDict-clear"><strong>clear</strong></a> = <a href="#ImmutableDict-_immutable">_immutable</a>(self, *args, **kws)</dt></dl>
+
+<dl><dt><a name="ImmutableDict-pop"><strong>pop</strong></a> = <a href="#ImmutableDict-_immutable">_immutable</a>(self, *args, **kws)</dt></dl>
+
+<dl><dt><a name="ImmutableDict-popitem"><strong>popitem</strong></a> = <a href="#ImmutableDict-_immutable">_immutable</a>(self, *args, **kws)</dt></dl>
+
+<dl><dt><a name="ImmutableDict-setdefault"><strong>setdefault</strong></a> = <a href="#ImmutableDict-_immutable">_immutable</a>(self, *args, **kws)</dt></dl>
+
+<dl><dt><a name="ImmutableDict-update"><strong>update</strong></a> = <a href="#ImmutableDict-_immutable">_immutable</a>(self, *args, **kws)</dt></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<hr>
+Methods inherited from <a href="builtins.html#dict">builtins.dict</a>:<br>
+<dl><dt><a name="ImmutableDict-__contains__"><strong>__contains__</strong></a>(self, key, /)</dt><dd><tt>True&nbsp;if&nbsp;the&nbsp;dictionary&nbsp;has&nbsp;the&nbsp;specified&nbsp;key,&nbsp;else&nbsp;False.</tt></dd></dl>
+
+<dl><dt><a name="ImmutableDict-__eq__"><strong>__eq__</strong></a>(self, value, /)</dt><dd><tt>Return&nbsp;self==value.</tt></dd></dl>
+
+<dl><dt><a name="ImmutableDict-__ge__"><strong>__ge__</strong></a>(self, value, /)</dt><dd><tt>Return&nbsp;self&gt;=value.</tt></dd></dl>
+
+<dl><dt><a name="ImmutableDict-__getattribute__"><strong>__getattribute__</strong></a>(self, name, /)</dt><dd><tt>Return&nbsp;getattr(self,&nbsp;name).</tt></dd></dl>
+
+<dl><dt><a name="ImmutableDict-__getitem__"><strong>__getitem__</strong></a>(...)</dt><dd><tt>x.<a href="#ImmutableDict-__getitem__">__getitem__</a>(y)&nbsp;&lt;==&gt;&nbsp;x[y]</tt></dd></dl>
+
+<dl><dt><a name="ImmutableDict-__gt__"><strong>__gt__</strong></a>(self, value, /)</dt><dd><tt>Return&nbsp;self&gt;value.</tt></dd></dl>
+
+<dl><dt><a name="ImmutableDict-__init__"><strong>__init__</strong></a>(self, /, *args, **kwargs)</dt><dd><tt>Initialize&nbsp;self.&nbsp;&nbsp;See&nbsp;help(type(self))&nbsp;for&nbsp;accurate&nbsp;signature.</tt></dd></dl>
+
+<dl><dt><a name="ImmutableDict-__ior__"><strong>__ior__</strong></a>(self, value, /)</dt><dd><tt>Return&nbsp;self|=value.</tt></dd></dl>
+
+<dl><dt><a name="ImmutableDict-__iter__"><strong>__iter__</strong></a>(self, /)</dt><dd><tt>Implement&nbsp;iter(self).</tt></dd></dl>
+
+<dl><dt><a name="ImmutableDict-__le__"><strong>__le__</strong></a>(self, value, /)</dt><dd><tt>Return&nbsp;self&lt;=value.</tt></dd></dl>
+
+<dl><dt><a name="ImmutableDict-__len__"><strong>__len__</strong></a>(self, /)</dt><dd><tt>Return&nbsp;len(self).</tt></dd></dl>
+
+<dl><dt><a name="ImmutableDict-__lt__"><strong>__lt__</strong></a>(self, value, /)</dt><dd><tt>Return&nbsp;self&lt;value.</tt></dd></dl>
+
+<dl><dt><a name="ImmutableDict-__ne__"><strong>__ne__</strong></a>(self, value, /)</dt><dd><tt>Return&nbsp;self!=value.</tt></dd></dl>
+
+<dl><dt><a name="ImmutableDict-__or__"><strong>__or__</strong></a>(self, value, /)</dt><dd><tt>Return&nbsp;self|value.</tt></dd></dl>
+
+<dl><dt><a name="ImmutableDict-__repr__"><strong>__repr__</strong></a>(self, /)</dt><dd><tt>Return&nbsp;repr(self).</tt></dd></dl>
+
+<dl><dt><a name="ImmutableDict-__reversed__"><strong>__reversed__</strong></a>(self, /)</dt><dd><tt>Return&nbsp;a&nbsp;reverse&nbsp;iterator&nbsp;over&nbsp;the&nbsp;<a href="builtins.html#dict">dict</a>&nbsp;keys.</tt></dd></dl>
+
+<dl><dt><a name="ImmutableDict-__ror__"><strong>__ror__</strong></a>(self, value, /)</dt><dd><tt>Return&nbsp;value|self.</tt></dd></dl>
+
+<dl><dt><a name="ImmutableDict-__sizeof__"><strong>__sizeof__</strong></a>(...)</dt><dd><tt>D.<a href="#ImmutableDict-__sizeof__">__sizeof__</a>()&nbsp;-&gt;&nbsp;size&nbsp;of&nbsp;D&nbsp;in&nbsp;memory,&nbsp;in&nbsp;bytes</tt></dd></dl>
+
+<dl><dt><a name="ImmutableDict-copy"><strong>copy</strong></a>(...)</dt><dd><tt>D.<a href="#ImmutableDict-copy">copy</a>()&nbsp;-&gt;&nbsp;a&nbsp;shallow&nbsp;copy&nbsp;of&nbsp;D</tt></dd></dl>
+
+<dl><dt><a name="ImmutableDict-get"><strong>get</strong></a>(self, key, default=None, /)</dt><dd><tt>Return&nbsp;the&nbsp;value&nbsp;for&nbsp;key&nbsp;if&nbsp;key&nbsp;is&nbsp;in&nbsp;the&nbsp;dictionary,&nbsp;else&nbsp;default.</tt></dd></dl>
+
+<dl><dt><a name="ImmutableDict-items"><strong>items</strong></a>(...)</dt><dd><tt>D.<a href="#ImmutableDict-items">items</a>()&nbsp;-&gt;&nbsp;a&nbsp;set-like&nbsp;<a href="builtins.html#object">object</a>&nbsp;providing&nbsp;a&nbsp;view&nbsp;on&nbsp;D's&nbsp;items</tt></dd></dl>
+
+<dl><dt><a name="ImmutableDict-keys"><strong>keys</strong></a>(...)</dt><dd><tt>D.<a href="#ImmutableDict-keys">keys</a>()&nbsp;-&gt;&nbsp;a&nbsp;set-like&nbsp;<a href="builtins.html#object">object</a>&nbsp;providing&nbsp;a&nbsp;view&nbsp;on&nbsp;D's&nbsp;keys</tt></dd></dl>
+
+<dl><dt><a name="ImmutableDict-values"><strong>values</strong></a>(...)</dt><dd><tt>D.<a href="#ImmutableDict-values">values</a>()&nbsp;-&gt;&nbsp;an&nbsp;<a href="builtins.html#object">object</a>&nbsp;providing&nbsp;a&nbsp;view&nbsp;on&nbsp;D's&nbsp;values</tt></dd></dl>
+
+<hr>
+Class methods inherited from <a href="builtins.html#dict">builtins.dict</a>:<br>
+<dl><dt><a name="ImmutableDict-__class_getitem__"><strong>__class_getitem__</strong></a>(...)<font color="#909090"><font face="helvetica, arial"> from <a href="builtins.html#type">builtins.type</a></font></font></dt><dd><tt>See&nbsp;<a href="https://www.python.org/dev/peps/pep-0585/">PEP&nbsp;585</a></tt></dd></dl>
+
+<dl><dt><a name="ImmutableDict-fromkeys"><strong>fromkeys</strong></a>(iterable, value=None, /)<font color="#909090"><font face="helvetica, arial"> from <a href="builtins.html#type">builtins.type</a></font></font></dt><dd><tt>Create&nbsp;a&nbsp;new&nbsp;dictionary&nbsp;with&nbsp;keys&nbsp;from&nbsp;iterable&nbsp;and&nbsp;values&nbsp;set&nbsp;to&nbsp;value.</tt></dd></dl>
+
+<hr>
+Static methods inherited from <a href="builtins.html#dict">builtins.dict</a>:<br>
+<dl><dt><a name="ImmutableDict-__new__"><strong>__new__</strong></a>(*args, **kwargs)<font color="#909090"><font face="helvetica, arial"> from <a href="builtins.html#type">builtins.type</a></font></font></dt><dd><tt>Create&nbsp;and&nbsp;return&nbsp;a&nbsp;new&nbsp;<a href="builtins.html#object">object</a>.&nbsp;&nbsp;See&nbsp;help(type)&nbsp;for&nbsp;accurate&nbsp;signature.</tt></dd></dl>
+
+</td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#55aa55">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Data</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#55aa55"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><strong>InitialHeaders</strong> = &lt;elixir.middleware.Headers object&gt;<br>
+<strong>Iterable</strong> = typing.Iterable<br>
+<strong>List</strong> = typing.List<br>
+<strong>Union</strong> = typing.Union</td></tr></table>
+</body></html>
